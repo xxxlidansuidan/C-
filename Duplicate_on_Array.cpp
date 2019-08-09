@@ -1,3 +1,15 @@
+/*
+ * =====================================================================================
+ *
+ *    Description: Duplicate Elimination
+ *
+ *        Version:  1.0
+ *        Created:  22/04/16 13:20:05
+ *       Revision:  none
+ *       Compiler:  g++
+ *
+ * =====================================================================================
+ */
 #include <iostream>
 using namespace std;
 const unsigned int limit = 5;
@@ -14,7 +26,6 @@ int main() {
 		if (x != 0) cout << x << " ";
 	}
 	cout << endl;
-	cout << ::limit << endl;
 }
 void addToArray(int n[], int v) {
 	static unsigned int limit{0};
