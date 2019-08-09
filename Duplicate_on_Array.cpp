@@ -12,8 +12,11 @@
  */
 #include <iostream>
 using namespace std;
-const unsigned int limit = 5;
+
+const unsigned int limit{5};
+
 void addToArray(int[], int);
+
 int main() {
 	int n[limit] = { }, v{0};
 	for (size_t i{0}; i < limit; ++i) {
@@ -28,7 +31,9 @@ int main() {
 	cout << endl;
 }
 void addToArray(int n[], int v) {
+	
 	static unsigned int limit{0};
+	
 	bool duplicate = false;
 	for (size_t i{0}; i <= limit; i++) {
 		if (n[i] == v) {
