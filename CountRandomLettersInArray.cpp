@@ -39,4 +39,3 @@ void displayCounts(const int counts[]) {
 		cout << "(" << counts[i] << static_cast<char>('a' + i) << ")" << ((i + 1) % 10 == 0 ? "\n" : " ");
 	}
 }
-
