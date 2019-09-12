@@ -25,6 +25,7 @@ int main() {
 	int mini = n+1;
 	for (int i = 1; i  <= n; i++) {
 		//int j = lowerBound(1, n+1, k+sum[i-1]);
+		//for Pointer....
 		int j = lower_bound(sum+1, sum+n+1, k + sum[i-1]) - sum; //1-indexing use kiya, iss liye (- sum+1) korte hobe nah!
 		if (j <= n) 
 			mini = min(mini, j-i+1);
