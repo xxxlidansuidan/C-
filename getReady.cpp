@@ -1,3 +1,4 @@
+/**Question : find (K) value ka lower or minimus length koto hoy, using prefix sum binary search */ 
 #include <iostream>
 using namespace std;
 const int maxn = (int)2e5+5;
@@ -23,7 +24,8 @@ int main() {
 	}
 	int mini = n+1;
 	for (int i = 1; i  <= n; i++) {
-		int j = lower_bound(sum+1, sum+n+1, k + sum[i-1]) - sum;
+		//int j = lowerBound(1, n+1, k+sum[i-1]);
+		int j = lower_bound(sum+1, sum+n+1, k + sum[i-1]) - sum; //1-indexing use kiya, iss liye (- sum+1) korte hobe nah!
 		if (j <= n) 
 			mini = min(mini, j-i+1);
 	}
